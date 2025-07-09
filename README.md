@@ -45,12 +45,12 @@ where `config-name` is the name of the config file (i.e., `s0`, `example-config`
 ### 3. Visualize results 
 Use the visualization script to view population fitness and complexity over time: 
 ```bash
-python visualize.py checkpoints/ --labels [labels]
+python visualize.py checkpoints/ --labels label
 ```
 
 To compare two runs: 
 ```bash 
-python visualize.py checkpoints/[cp_name1] checkpoints/[cp_name2] --labels experiment1 experiment2
+python visualize.py checkpoints/cp_name1 checkpoints/cp_name2 --labels experiment1 experiment2
 ```
 When comparing two runs, use the `cp_name` parameter specified in the config file. 
 
