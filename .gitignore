@@ -1,0 +1,17 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Logs and checkpoints
+logs/*
+checkpoints/*
+
+# But keep the directories themselves
+!logs/.gitkeep
+!checkpoints/.gitkeep
+
+# Test files 
+plot_fitness_comparison.py
+evoHelpersOriginal.py
+evolution-original.py
