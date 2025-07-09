@@ -56,7 +56,7 @@ When comparing two runs, use the `cp_name` parameter specified in the config fil
 
 An example plot is included in `plots/example.png`.
 
-### Notes 
+## Notes 
 * Checkpoint files are thinned to reduce disk usage. Only the most-recent checkpoint contains a DEAP logbook, but all contain populations from those save points 
 * If a simulation is interrupted before completion, running `python evolution.py config-name` again will resume it from the most-recent checkpoint 
 
