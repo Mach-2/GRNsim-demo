@@ -2,7 +2,7 @@
 
 **GRNsim** uses genetic algorithms developed with the DEAP Python framework to simulate the evolution of gene regulatory networks (GRNs). Individuals within the population consist of biochemically-informed GRNs that model transcription factor binding and target gene expression. The simulation tracks fitness, regulatory complexity, and optionally population diversity to explore the role of recombination in the evolution of regulatory complexity. 
 
-This repository is a **demonstration subset** of the simulation framework developed as part of my graduate studies. It includes the essential functions and core logic, but does not contain the full range of simulation paramters or final experimental results. A manuscript with full results and analysis is currently in preparation.
+This repository is a **demonstration subset** of the simulation framework developed as part of my graduate studies. It includes the essential functions and core logic, but does not contain the full range of simulation parameters or final experimental results. A manuscript with full results and analysis is currently in preparation.
 
 ## Installation 
 Clone repository:

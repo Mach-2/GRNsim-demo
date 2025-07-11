@@ -38,6 +38,8 @@ def extract_data(directory):
     complexities = []
     for rep_path in natsorted(glob.glob(os.path.join(directory, "*_gen*")), alg=ns.IGNORECASE):
         checkpoint = load_checkpoint(rep_path)
+        print(rep_path)
+        
         log = checkpoint['logbook']
         
         # Clean any duplicate generations 
@@ -60,8 +62,8 @@ def plot_all(fits_list, comps_list, labels, ax_fitness, ax_complexity):
         custom_lines.append(Line2D([0], [0], color=color, linewidth=2))
 
         for fit, comp in zip(fit_runs, comp_runs):
-            ax_fitness.plot(fit[:40000], color=color, alpha=0.1)
-            ax_complexity.plot(comp[:40000], color=color, alpha=0.1)
+            ax_fitness.plot(fit[:1000000], color=color, alpha=0.1)
+            ax_complexity.plot(comp[:1000000], color=color, alpha=0.1)
 
     ax_fitness.set_title("Fitness")
     ax_fitness.set_ylabel("Fitness (% of maximum)")
@@ -91,6 +93,7 @@ def main():
 
     fig, (fitness_ax, complexity_ax) = plt.subplots(1, 2, figsize=(8, 3), sharex=True)
     fitness_ax.set_xscale('log')
+    # fitness_ax.set_xlim(left=100)
     fitness_ax.set_ylim(-2.23, 102.23)
     complexity_ax.set_ylim(-0.022, 1.022)
     

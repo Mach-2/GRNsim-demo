@@ -225,13 +225,13 @@ def track_metrics(population, gen, max_fitness, config, logbook):
 
     Args:
         population (list): current population
-        gen (_type_): _description_
-        max_fitness (_type_): _description_
-        config (_type_): _description_
-        logbook (_type_): _description_
+        gen (int): current generation
+        max_fitness (float): maximum fitness that can be achieved by the network
+        config (dict): configuration parameters
+        logbook (Logbook): DEAP logbook to update
 
     Returns:
-        _type_: _description_
+        Logbook: a Logbook with metrics added for the latest generation
     """
     population_metrics = compute_population_metrics(population, max_fitness)
 
