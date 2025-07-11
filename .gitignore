@@ -15,3 +15,4 @@ checkpoints/*
 plot_fitness_comparison.py
 evoHelpersOriginal.py
 evolution-original.py
+.DS_Store
