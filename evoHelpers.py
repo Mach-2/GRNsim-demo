@@ -56,11 +56,20 @@ def edges(reg_genes, starting_affinity):
     """
     if starting_affinity == "minimum":
         return -(0.517 * math.log(reg_genes) + 2.516)
-    elif starting_affinity == "moderate":
+    elif starting_affinity == "moderate" or starting_affinity == 'asymmetrical':
         return 0.0
     else: 
         raise ValueError(f"Unknown initial complexity mode: {starting_affinity}")
-    # Is there code for moderate initial affinity? 
+
+def asymmetrical_affinities(individual):
+    """Re-configures the GRN topology for asymmetric initial binding affinities
+
+    """
+    for col in range(220): 
+        row = random.randint(0, 19)
+        index = row*220 + col
+        individual[index] = 0.517*math.log(20)+2.516
+    return individual
 
 
 def unpack_pairs_and_eval(reg_genes, target_genes, activator_list, repressor_list, target_list, opt_expression, pair):

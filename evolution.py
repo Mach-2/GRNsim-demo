@@ -156,6 +156,8 @@ def initialize_population(max_fitness, config, toolbox):
     
     # Create population
     population = toolbox.population(n=config["population_size"])
+    if config['initial_affinity'] == 'asymmetrical':
+        population = list(toolbox.map(ev.asymmetrical_affinities, population))
     
     # Evaluate each individual
     for ind in population:
